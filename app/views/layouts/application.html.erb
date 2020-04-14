@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cars</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= link_to "Vehiculos", cars_path %>
+    <strong>/</strong>
+    <%= link_to "Estilos", car_styles_path %>
+    <strong>/</strong>
+    <%= link_to "Clases", carclasses_path %>
+    <strong>|</strong>
+    <%= link_to "Agregar Vehiculo", new_car_path %>
+    <strong>/</strong>
+    <%= link_to "Agregar Estilos", new_car_style_path %>
+    <strong>/</strong>
+    <%= link_to "Agregar Clases", new_carclass_path %>
+    <%= yield %>
+  </body>
+</html>

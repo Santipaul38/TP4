@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Classes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @carclasses.each do |carclass| %>
+      <tr>
+        <td><%= carclass.name %></td>
+        <td><%= link_to 'Show', carclass %></td>
+        <td><%= link_to 'Edit', edit_carclass_path(carclass) %></td>
+        <td><%= link_to 'Destroy', carclass, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Carclass', new_carclass_path %>
